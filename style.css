@@ -1,0 +1,299 @@
+/* Resetting margins, padding, and box-sizing for consistency across browsers */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #3498db, #8e44ad); /* Gradient Background */
+  color: #fff;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensure it can grow to fit content */
+  overflow: auto; /* Allow scrolling if content overflows */
+  padding: 20px; /* Some padding for smaller screens */
+  flex-direction: column; /* Ensures that form and output are stacked vertically */
+}
+
+/* Heading Styling */
+h2 {
+  font-size: 2rem;
+  color: #ecf0f1;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  animation: fadeIn 2s ease-out;
+}
+.top-h{
+  font-size:70px;
+}
+/* Form Styles */
+#resumeForm {
+  background: rgba(0, 0, 0, 0.6); /* Slightly transparent black */
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  backdrop-filter: blur(10px); /* Glassy effect */
+  animation: slideIn 1s ease-out;
+}
+
+label {
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+input[type="text"], input[type="email"] {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  border: 1px solid #ecf0f1;
+  background-color: #2c3e50;
+  color: #fff;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="email"]:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.6); /* Blue glow on focus */
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  background-color: #8e44ad; /* Purple background */
+  color: #fff;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+button[type="submit"]:hover {
+  background-color: #9b59b6; /* Lighter purple on hover */
+  transform: scale(1.05); /* Subtle scaling animation */
+}
+
+/* Resume Output Styles */
+#resumeOutput {
+  background-color: #34495e;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  margin-top: 30px;
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+  opacity: 0;
+  animation: fadeIn 2s ease-out forwards; /* Fade-in effect */
+}
+
+#resumeOutput h2 {
+  font-size: 1.5rem;
+  color: #3498db; /* Blue color */
+  margin-bottom: 20px;
+}
+
+#resumeOutput p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+#resumeOutput p strong {
+  color: #ecf0f1;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+/* Styling for the file input field */
+input[type="file"] {
+  display: block;
+  width: 100%; /* Full width matching other input fields */
+  padding: 14px;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  border: 1px solid #ecf0f1;
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+input[type="file"]:hover {
+  background-color: #34495e; /* Darker background on hover */
+}
+
+input[type="file"]:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.6); /* Blue glow on focus */
+}
+
+label[for="profileImage"] {
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+/* Adjust for file input pseudo-elements */
+input[type="file"]::-webkit-file-upload-button {
+  background-color: #8e44ad; /* Custom button color */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="file"]::-webkit-file-upload-button:hover {
+  background-color: #9b59b6; /* Lighter purple on hover */
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 767px) {
+  input[type="file"] {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
+
+
+/* Responsive Design */
+
+/* Large screens (desktops and large laptops) */
+@media (min-width: 1200px) {
+  #resumeForm {
+    padding: 50px;
+    max-width: 700px;
+  }
+
+  input[type="text"], input[type="email"] {
+    font-size: 1.2rem;
+  }
+
+  button[type="submit"] {
+    font-size: 1.3rem;
+  }
+
+  #resumeOutput h2 {
+    font-size: 1.8rem;
+  }
+
+  #resumeOutput p {
+    font-size: 1.2rem;
+  }
+}
+
+/* Medium screens (tablets and small laptops) */
+@media (max-width: 1199px) and (min-width: 768px) {
+  #resumeForm {
+    padding: 30px;
+    max-width: 600px;
+  }
+
+  input[type="text"], input[type="email"] {
+    font-size: 1.1rem;
+  }
+
+  button[type="submit"] {
+    font-size: 1.2rem;
+  }
+
+  #resumeOutput h2 {
+    font-size: 1.6rem;
+  }
+
+  #resumeOutput p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 767px) {
+  body {
+    padding: 10px;
+  }
+
+  #resumeForm {
+    padding: 20px;
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  label {
+    font-size: 1rem;
+  }
+
+  input[type="text"], input[type="email"], button[type="submit"] {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  button[type="submit"] {
+    font-size: 1.1rem;
+  }
+
+  #resumeOutput h2 {
+    font-size: 1.4rem;
+  }
+
+  #resumeOutput p {
+    font-size: 1rem;
+  }
+}
+
+/* Extra small screens (phones in landscape or very small screens) */
+@media (max-width: 480px) {
+  #resumeForm {
+    padding: 15px;
+  }
+
+  input[type="text"], input[type="email"], button[type="submit"] {
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  #resumeOutput p {
+    font-size: 0.9rem;
+  }
+}
+

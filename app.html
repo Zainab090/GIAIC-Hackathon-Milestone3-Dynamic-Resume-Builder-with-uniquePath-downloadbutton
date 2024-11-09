@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    <form id="resumeForm">
+        <h2 class="top-h">Resume Builder</h2>
+
+        <label for="username">
+        <input type="text" name="username" id="username" required>
+
+        </label>
+        <h2>Personal Information</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <h2>Email</h2>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <h2>Contact</h2>
+        <label for="phone">Phone:</label>
+        <input type="text" name="phone" id="phone" required><br><br>
+
+        <h2>Education</h2>
+        <label for="education">Education:</label>
+        <input type="text" name="education" id="education" required><br><br>
+
+        <h2>Work Experience</h2>
+        <label for="experience">Experience:</label>
+        <input type="text" name="experience" id="experience" required><br><br>
+
+        <h2>Skills</h2>
+        <label for="skills">Skills:</label>
+        <input type="text" name="skills" id="skills" required><br><br>
+
+        <h2>Description</h2>
+        <label for="description">Description:</label>
+        <input type="text" name="description" id="description" required><br><br>
+
+        <!-- New Image Upload Section -->
+        <h2>Upload Profile Picture</h2>
+        <label for="profileImage">Profile Image:</label>
+        <input type="file" id="profileImage" name="profileImage" accept=".jpg, .jpeg, .png" required><br><br>
+
+        <button type="submit">Generate Resume</button>
+    </form>
+
+    <!-- Resume output will appear here -->
+    <div id="resumeOutput"></div>
+    
+    <script src="index.js"></script>
+</body>
+</html>
